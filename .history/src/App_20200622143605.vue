@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <div ref="echarts" style="width: 1200px;height:700px;"></div>
+  <div ref="echarts" style="width: 600px;height:400px;"></div>
   </div>
 </template>
 <script>
@@ -40,7 +40,7 @@ export default {
         {name: '鹰潭市', value: 39},
         {name: '新余市', value: 480},
     ];
-    var max = 480, min = 9; // todo
+    var max = 480, min = 9; // todo 
     var maxSize4Pin = 100, minSize4Pin = 20;
 
     var convertData = function (data) {
@@ -56,7 +56,7 @@ export default {
       }
       return res;
     };
-
+    
     var option = {
         title: {
             text: '“绿色金融” - 江西省',
@@ -67,14 +67,14 @@ export default {
             }
         },
         tooltip: {
-          trigger: 'item',
-          formatter: function (params) {
-            if(typeof(params.value)[2] == "undefined"){
-              return params.name + ' : ' + params.value;
-            }else{
-              return params.name + ' : ' + params.value[2];
+            trigger: 'item',
+            formatter: function (params) {
+              if(typeof(params.value)[2] == "undefined"){
+              	return params.name + ' : ' + params.value;
+              }else{
+              	return params.name + ' : ' + params.value[2];
+              }
             }
-          }
         },
         legend: {
             orient: 'vertical',

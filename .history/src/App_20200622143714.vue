@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <div ref="echarts" style="width: 1200px;height:700px;"></div>
+  <div ref="echarts" style="width: 900px;height:700px;"></div>
   </div>
 </template>
 <script>
